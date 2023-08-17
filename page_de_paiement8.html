@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page de Paiement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .payment-form {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 400px;
+            text-align: center;
+        }
+
+        .payment-form h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .payment-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .payment-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-form">
+        <h2>Paiement sécurisé</h2>
+        <form action="https://perfectmoney.com/api/step1.asp" method="POST">
+            <input type="hidden" name="PAYEE_ACCOUNT" value="U25444544">
+            <input type="hidden" name="PAYEE_NAME" value="The BEST Prop Firm">
+            <input type="hidden" name="PAYMENT_ID" value="Veuillez bien écrire votre adresse mail sans erreur">
+            <input type="hidden" name="PAYMENT_AMOUNT" value="1439">
+            <input type="hidden" name="PAYMENT_UNITS" value="USD">
+            <input type="hidden" name="STATUS_URL" value="">
+            <input type="hidden" name="PAYMENT_URL" value="STATUS_URL description atao rehefa vita ny paiement">
+            <input type="hidden" name="PAYMENT_URL_METHOD" value="LINK">
+            <input type="hidden" name="NOPAYMENT_URL" value="STATUS_URL description atao raha tsy nety ny paiement">
+            <input type="hidden" name="NOPAYMENT_URL_METHOD" value="LINK">
+            <input type="hidden" name="SUGGESTED_MEMO" value="">
+            <input type="hidden" name="BAGGAGE_FIELDS" value="">
+            <input type="submit" name="PAYMENT_METHOD" value="Pay Now!">
+        </form>
+    </div>
+</body>
+</html>

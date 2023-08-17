@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            padding: 20px;
+            background-color: white;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .logo {
+            max-width: 100px;
+            height: auto;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        label, input {
+            display: block;
+            margin: 10px 0;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            const form = document.querySelector('form');
+            const agreementCheckbox = document.querySelector('#agreement');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const username = document.querySelector('#username').value;
+                const email = document.querySelector('#email').value;
+                const password = document.querySelector('#password').value;
+
+                if (agreementCheckbox.checked) {
+                    // Vérifier si les informations existent déjà dans le stockage local
+                    if (
+                        localStorage.getItem('username') === username &&
+                        localStorage.getItem('email') === email &&
+                        localStorage.getItem('password') === password
+                    ) {
+                        alert('Ces informations d\'inscription existent déjà dans le stockage local.');
+                    } else {
+                        // Enregistrer les informations dans le stockage local
+                        localStorage.setItem('username', username);
+                        localStorage.setItem('email', email);
+                        localStorage.setItem('password', password);
+
+                        // Rediriger vers la page profil.html
+                        window.location.href = 'profil.html';
+                    }
+                } else {
+                    alert('Vous devez accepter les conditions pour vous inscrire.');
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img src="site.png" alt="Logo" class="logo">
+        <h1>Inscription</h1>
+        <form>
+            <label for="username">Nom d'utilisateur:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="email">Adresse email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label>
+                <input type="checkbox" id="agreement" required>
+                J'accepte les <a href="conditions_utilisation.html" target="_blank">conditions d'utilisation</a>
+            </label>
+            
+            <button type="submit">S'inscrire</button>
+        </form>
+    </div>
+</body>
+</html>
