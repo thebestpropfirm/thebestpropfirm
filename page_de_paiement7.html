@@ -1,68 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page de Paiement</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: #007BFF;
         }
 
-        .payment-form {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-            padding: 30px;
-            width: 400px;
+        .top-bar {
+            background-color: #0056b3;
+            padding: 10px 0;
             text-align: center;
         }
 
-        .payment-form h2 {
-            color: #007bff;
-            margin-bottom: 20px;
+        .header {
+            text-align: center;
+            padding: 20px;
         }
 
-        .payment-button {
-            display: inline-block;
-            padding: 15px 40px;
-            background-color: #007bff;
+        h1 {
             color: #fff;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+            font-size: 24px;
+            margin-bottom: 10px;
         }
 
-        .payment-button:hover {
+        p {
+            color: #f0f0f0;
+        }
+
+        img.logo {
+            width: 150px;
+        }
+
+        form {
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        input[type="submit"] {
             background-color: #0056b3;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #003c80;
+        }
+
+        .assistance {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .assistance a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .assistance a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="payment-form">
-        <h2>Paiement sécurisé</h2>
-        <form action="https://perfectmoney.com/api/step1.asp" method="POST">
-            <input type="hidden" name="PAYEE_ACCOUNT" value="U25444544">
-            <input type="hidden" name="PAYEE_NAME" value="The BEST Prop Firm">
-            <input type="hidden" name="PAYMENT_ID" value="Veuillez bien écrire votre adresse mail sans erreur">
-            <input type="hidden" name="PAYMENT_AMOUNT" value="1439">
-            <input type="hidden" name="PAYMENT_UNITS" value="USD">
-            <input type="hidden" name="STATUS_URL" value="">
-            <input type="hidden" name="PAYMENT_URL" value="STATUS_URL description atao rehefa vita ny paiement">
-            <input type="hidden" name="PAYMENT_URL_METHOD" value="LINK">
-            <input type="hidden" name="NOPAYMENT_URL" value="STATUS_URL description atao raha tsy nety ny paiement">
-            <input type="hidden" name="NOPAYMENT_URL_METHOD" value="LINK">
-            <input type="hidden" name="SUGGESTED_MEMO" value="">
-            <input type="hidden" name="BAGGAGE_FIELDS" value="">
-            <input type="submit" name="PAYMENT_METHOD" value="Pay Now!">
-        </form>
+    <div class="top-bar"> <!-- Barre supérieure -->
+        Assistance disponible : <a href="contact.html" style="color: #fff;">Contactez-nous</a>
+    </div>
+
+    <div class="header">
+        <h1>commencer votre paiement</h1>
+        <p>Merci d'avoir choisi BestPropFirm pour votre achat.</p>
+        <img src="site.png" alt="Logo de BestPropFirm" class="logo">
+    </div>
+
+    <form action="https://perfectmoney.com/api/step1.asp" method="POST">
+<input type="hidden" name="PAYEE_ACCOUNT" value="U25444544">
+<input type="hidden" name="PAYEE_NAME" value="BestPropFirm">
+<input type="hidden" name="PAYMENT_ID" value="veillier bien a ce que votre adresse mail soit commenté dessous">
+<input type="hidden" name="PAYMENT_AMOUNT" value="161">
+<input type="hidden" name="PAYMENT_UNITS" value="USD">
+<input type="hidden" name="STATUS_URL" value="http://127.0.0.1:8080/essaie1/web_sites/site_1/$preview/crbst_6.html">
+<input type="hidden" name="PAYMENT_URL" value="http://127.0.0.1:8080/essaie1/web_sites/site_1/$preview/crbst_6.html">
+<input type="hidden" name="PAYMENT_URL_METHOD" value="http1270018080essaie1websitessite1previewcrbst6html">
+<input type="hidden" name="NOPAYMENT_URL" value="http://127.0.0.1:8080/essaie1/web_sites/site_1/$preview/crbst_6.html">
+<input type="hidden" name="NOPAYMENT_URL_METHOD" value="http1270018080essaie1websitessite1previewcrbst6html">
+<input type="hidden" name="SUGGESTED_MEMO" value="">
+<input type="hidden" name="BAGGAGE_FIELDS" value="">
+<input type="submit" name="PAYMENT_METHOD" value="Pay Now!">
+</form>
+
+    <div class="assistance">
+        <p>Assistance disponible : <a href="contact.html">Contactez-nous</a></p>
     </div>
 </body>
 </html>
