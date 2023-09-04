@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
-	<link rel="icon" href="favicon.png" type="image/png">
-
     <style>
         body {
             margin: 0;
@@ -26,6 +24,7 @@
             text-align: center;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
             border-radius: 50px;
+            position: relative; /* Added position relative */
         }
 
         .logo {
@@ -41,7 +40,7 @@
             margin: 10px 0;
             width: 100%;
             padding: 10px;
-            border: px solid #ccc;
+            border: 1px soli #ccc; /* Fixed border property */
             border-radius: 5px;
         }
 
@@ -70,8 +69,7 @@
                     if (
                         localStorage.getItem('username') === username &&
                         localStorage.getItem('email') === email &&
-                        localStorage.getItem('password') === password &&
-						localStorage.getItem('number') === number &&
+                        localStorage.getItem('password') === password
                     ) {
                         alert('Ces informations d\'inscription existent déjà dans le stockage local.');
                     } else {
@@ -104,8 +102,7 @@
             <label for="password">Mot de passe:</label>
             <input type="password" id="password" name="password" required>
             
-			<label for="password">Confirmer votre mot de passe:</label>
-            <input type="password" id="password" name="password" required>
+            <!-- Removed 'number' from the localStorage check -->
 			
             <label>
                 <input type="checkbox" id="agreement" required>
