@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="icon" href="favicon.png" type="image/png">
-
+<link rel="icon" href="favicon.png" type="image/png">
     <title>Profil</title>
     <style>
         /* Votre code CSS existant ici */
@@ -44,10 +43,12 @@
         }
 
         .offer-number {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
             color: #007bff;
-            margin: 10px 0;
+            margin: 0px 0;
+            border-radius: 50px;
+		    background-color: #ffffff;
         }
 
         .offer-image {
@@ -60,13 +61,14 @@
 
         .offer-button {
         display: block;
-        margin-top: 10px;
-        padding: 10px 20px;
+        margin-top: 0px;
+        padding: 15px 20px;
         background-color: #007bff;
         color: #fff;
         text-decoration: none;
-        border-radius: 5px;
+        border-radius: 15px;
         transition: background-color 0.3s;
+        font-size: 40px;
         }
 
         .offer-button:hover {
@@ -88,6 +90,7 @@
         border-radius: 5px;
         transition: background-color 0.3s;
         margin-top: 20px;
+        font-size: 13px;
         }
 
 a.logout-button {size: a3;}
@@ -106,6 +109,7 @@ a.logout-button {size: a3;}
             border-radius: 5px;
             transition: background-color 0.3s;
             margin-top: 20px;
+            font-size: 25px;
         }
 
         .profile-button:hover {
@@ -156,6 +160,11 @@ a.logout-button {size: a3;}
     </div>
     <button class="profile-button">Profil</button>
     <div class="offer">
+            <p class="offer-number">voir les competitions</p>
+            <img src="drapeau a damier.jpg" alt="voir les competitions" class="offer-image">
+            <a href="competition.html" class="offer-button">aller au competitions</a>
+        </div>
+	    <div class="offer">
             <p class="offer-number">Offre 1</p>
             <img src="offre1.jpg" alt="Offre 1" class="offer-image">
             <a href="page_de_paiement1.html" class="offer-button">Acheter offre1</a>
@@ -210,41 +219,53 @@ a.logout-button {size: a3;}
             <img src="offre11.jpg" alt="Offre 11" class="offer-image">
             <a href="page_de_paiement11.html" class="offer-button">Acheter offre11</a>
         </div>
-	    <div class="offer">
+		<div class="offer">
             <p class="offer-number">Offre 12</p>
-            <img src="offre12.jpg" alt="Offre 12" class="offer-image">
-            <a href="page_de_paiement12.html" class="offer-button">Acheter offre12</a>
+            <img src="offre10.jpg" alt="Offre 10" class="offer-image">
+            <a href="page_de_paiement10.html" class="offer-button">Acheter offre10</a>
         </div>
-            <div class="offer">
-            <p class="offer-number">Offre 13</p>
-            <img src="offre13.jpg" alt="Offre 13" class="offer-image">
-            <a href="page_de_paiement13.html" class="offer-button">Acheter Offre 13</a>
-        </div>
-        <div class="offer">
-            <p class="offer-number">Offre 14</p>
-            <img src="offre14.jpg" alt="Offre 14" class="offer-image">
-            <a href="page_de_paiement14.html" class="offer-button">Acheter Offre 14</a>
-        </div>
-        <div class="offer">
-           <p class="offer-number">Offre 15</p>
-           <img src="offre15.jpg" alt="Offre 15" class="offer-image">
-           <a href="page_de_paiement15.html" class="offer-button">Acheter Offre 15</a>
-        </div>
-        <div class="offer">
-           <p class="offer-number">Offre 16</p>
-           <img src="offre16.jpg" alt="Offre 16" class="offer-image">
-           <a href="page_de_paiement16.html" class="offer-button">Acheter Offre 16</a>
-       </div>
-       <div class="offer">
-           <p class="offer-number">Offre 17</p>
-           <img src="offre17.jpg" alt="Offre 17" class="offer-image">
-           <a href="page_de_paiement17.html" class="offer-button">Acheter Offre 17</a>
-       </div>
-       <div class="offer">
-           <p class="offer-number">Offre 18</p>
-           <img src="offre18.jpg" alt="Offre 18" class="offer-image">
-           <a href="page_de_paiement18.html" class="offer-button">Acheter Offre 18</a>
-       </div>
+<!-- Offre 13 -->
+<div class="offer">
+    <p class="offer-number">Offre 13</p>
+    <img src="offre13.jpg" alt="Offre 13" class="offer-image">
+    <a href="page_de_paiement13.html" class="offer-button">Acheter Offre 13</a>
+</div>
+
+<!-- Offre 14 -->
+<div class="offer">
+    <p class="offer-number">Offre 14</p>
+    <img src="offre14.jpg" alt="Offre 14" class="offer-image">
+    <a href="page_de_paiement14.html" class="offer-button">Acheter Offre 14</a>
+</div>
+
+<!-- Offre 15 -->
+<div class="offer">
+    <p class="offer-number">Offre 15</p>
+    <img src="offre15.jpg" alt="Offre 15" class="offer-image">
+    <a href="page_de_paiement15.html" class="offer-button">Acheter Offre 15</a>
+</div>
+
+<!-- Offre 16 -->
+<div class="offer">
+    <p class="offer-number">Offre 16</p>
+    <img src="offre16.jpg" alt="Offre 16" class="offer-image">
+    <a href="page_de_paiement16.html" class="offer-button">Acheter Offre 16</a>
+</div>
+
+<!-- Offre 17 -->
+<div class="offer">
+    <p class="offer-number">Offre 17</p>
+    <img src="offre17.jpg" alt="Offre 17" class="offer-image">
+    <a href="page_de_paiement17.html" class="offer-button">Acheter Offre 17</a>
+</div>
+
+<!-- Offre 18 -->
+<div class="offer">
+    <p class="offer-number">Offre 18</p>
+    <img src="offre18.jpg" alt="Offre 18" class="offer-image">
+    <a href="page_de_paiement18.html" class="offer-button">Acheter Offre 18</a>
+</div>
+
         <footer>
         <p>© 2023 The Best Propfirm - Tous droits réservés</p>
 		<p>thebestpropfirm@gmail.com </p>
